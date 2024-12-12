@@ -1,0 +1,757 @@
+AZ-400T00-A: Designing and Implementing Microsoft DevOps solutions
+
+Exam:
+https://learn.microsoft.com/en-us/credentials/certifications/exams/az-400/
+
+Demo code: 
+https://azuredevopsdemogenerator.azurewebsites.net/
+
+
+Day1:------------------------------------------------------------------------------------------------------------------------
+
+
+SDLC Models:
+
+1. Waterfall Model: linear & sequential approach
+
+various phases
+
+project requirement-----> well-defines  (goals are clear)
+
+large-scale projects
+
+
+Cons:
+No feedback path
+not accommodate the changes in between
+late defect detection
+limited user/stakeholder involvement
+less flexible
+
+
+2. Agile Development Model: (Iterative Model/ Sprint based Model)
+
+quickly adapt changes
+
+customer satisfaction
+
+
+A org---pay 50% advance, pay 50% at the time when completed-----> 1 year
+
+B org--- pay 10% every month & involving you & your feedback related to building the home---- 1 year
+
+
+1. Requirement Gathering
+2. Design
+3. Development
+4. Testing
+5. Deployment
+6. Feedback (changes/bugs fixing)
+
+
+DevOps
+
+aligns development & operations to optimize quality & delivery
+
+set of practices, tools & cultural philosophy. 
+
+3Ps---People, Processes, Products
+
+2007
+
+Pros:
+Speed
+Improve collaborations
+Quality & reliability
+security (DevSecOps)
+
+
+DevOps Practices:
+
+1. Continuous integration
+2. Continuous Delivery
+3. Automation
+4. Infrastructure as Code
+5. Microservice (low coupling)
+6. Monitoring
+
+
+Phases in PDLC DevOps
+
+
+
+Azure DevOps: SaaS platform 
+
+Services:
+1. Azure Boards
+2. Azure Repos
+3. Azure Pipelines
+4. Azure Artifacts
+5. Azure Testplan
+
+
+Pros:
+1. Reliability
+2. Scalability
+3. better collaborations
+4. access to the latest features
+
+
+
+Portal.azure.com
+
+Azure DevOps Organization
+
+dev.azure.com
+
+manage profile: aex.dev.azure.com
+
+1. Create the organization
+
+dev.azure.com/org
+
+2. Create the Project
+
+i) public
+ii) private
+
+dev.azure.com/org/projectname
+
+Entra ID Users:
+1. Cloud based user
+2. Dir Sync user
+3. guest user
+
+
+****
+
+Azure Boards---------  various processes --- for managing the work items
+
+
+1. Basic
+2. Scrum
+3. Agile
+4. CMMI
+
+
+
+Day 2:-----------------------------------------------------------------------------------------------------------------------
+
+
+
+Types of Projects:
+
+1. Greenfield Projects
+
+create a project from the scratch.
+
+2. Brownfield Projects
+
+improve or modify the existing system
+
+
+
+Team Structures:
+
+i) Horizontal team structure
+based on the architecture or technology component.
+
+e.g. front-end, back-end, databases
+
+ii) Vertical team structure
+organized around product outcome or customer centric features
+
+teams are cross-functional
+
+
+factors:--- nature of product/project, org goals
+
+
+
+
+
+Service Hook
+
+Publishers--- defines a set of events that we can subscribe
+
+Subscriptions ---listen for these events
+
+1. Action
+2. Consumer
+
+
+Source Control/ Version Control/ SCM
+
+manage & track changes to source code
+
+1. collaboration
+
+2. Tracking changes
+who, when, what
+
+3. code versioning
+
+x(major).x(minor).x(bugs)
+
+app 1.0.0--------> 1.1.0
+
+4. rollback & recovery
+
+5. Branching & merging
+
+add features or modification or fix the bug
+
+6. conflict resolution
+
+7. code integrity & security
+
+
+BesT practice:
+
+1. don't commit personal or sensitive files 
+2. make the small commits, frequently commit
+3. update the code often
+4. verify changes before pushing
+5. write clear commit message
+6. use branches effectively
+7. review code changes
+8. documentation
+
+
+Two types of Source Control system:
+
+1. Centralized VCS
+2. Distributed VCS
+
+
+ii. Azure Repo
+1. Centralized VCS-----> TFVC
+2. Distributed VCS-----> Git
+
+
+
+Multi Repo
+
+
+
+Branching:
+
+1. Create a branch
+2. add commit
+3. Open a pull request
+4. discuss & review the code
+5. merge
+
+
+
+Forking
+
+
+****** Azure Pipeline
+automatically
+build, tests & deploy code projects.
+
+
+1. Build automation & CI
+
+2. Test Automation & CT
+
+3. Deployment Automation & CD
+
+Benefits:
+
+i) languages:----Python, Java, C#, Go, Ruby
+
+ii) VCS:----GitHub, GitLab, bitbucket, azure repo
+
+iii) app types
+
+iv) Deployment target
+
+v) package formats
+
+
+Terminology:
+
+
+Agent:
+
+1. Microsoft hosted agent---- fully managed
+
+fresh VM
+
+Cons:
+limited s/w control
+Time limit
+
+2. Self hosted agent----- own infra
+
+no time limit 
+s/w flexibility
+platform compatibility
+
+
+3. VMSS agent---- scalability
+
+
+
+Agent Pools
+
+organize the agents in Agent pools
+
+
+sharing boundary for all of the agents in the pool.
+
+
+
+
+Day 3:-----------------------------------------------------------------------------------------------------------------------
+
+
+
+**** GitHub Actions
+automate the various tasks within your GitHub env.
+
+build, test & deploy your code directly from you GitHub repo.
+
+
+CI & CD pipelines
+
+
+configured using YAML files (workflows files)
+
+
+Runners:---- 
+
+i) GitHub-hosted runners ----fully managed
+Linux, MacOS, Windows
+
+ii) self-hosted runners----setup & manage your own infra
+
+
+GitHub Marketplace
+
+
+
+*******Package Management:
+
+
+1. Nuget package---.NET code artifacts
+.nupkg
+
+
+2. npm---- Javascript development
+
+pacakage.json
+
+3. Maven:---- java based projects
+
+4. PyPi---Python Package Index---- python projects
+
+5. docker
+
+
+Package Feed/ Package registries/ Package repo
+
+
+lib, dependencies, s/w components
+
+Public Package feeds:---- nuget.org, pypi.org, npmjs.org, docker hub
+
+Private Package Feeds
+
+
+***Azure Artifacts:--- public & private feeds for the s/w packages of diff types.
+
+1. Nuget
+2. nmp
+3. Maven
+4. python
+5. universal packages
+
+2GiB
+
+
+cd C:\pro
+
+dotnet pack .\pro
+
+
+
+Technical Debt (design or code debt)
+
+
+make mistakes
+lack of exp
+poor comm.
+quick & cheap solution
+inconsistent coding standard
+outdated lib or dependencies
+insufficient testing
+
+
+1. Reliability
+
+MTBF
+
+2. Maintainability
+
+i) time complexity
+ii) space complexity---LoC
+
+
+3. Testability
+
+4. Portability
+
+5. Reusability---- loose coupling (modularity)
+
+
+Metrics:
+
+
+1. failed build %
+2. failed deployment %
+3. ticket volumes
+4. bug bounce %
+5. unplanned work %
+
+
+
+Tools:
+
+1. SonarQube cloud
+2. NDepend----C#, .NET
+3. resharper Code quality analysis
+
+
+
+Raw code(Repo)----------> build----------> deploy------------>staging(pre-prod)----(swap)----> live(prod) env
+
+
+
+
+App Service----host the app
+
+App service plans:----compute
+
+features:---
+region
+VM instances
+Data disk
+custom domain
+zone redundancy
+backup
+deployment slots
+no. of app
+
+
+
+Continuous Delivery Vs Continuous Deployment
+
+Release process
+
+
+
+
+Traditional Lifecycle
+Plan
+Design
+Devlopemet
+Testing
+Deployment
+Maintenance & support
+
+Hotfixes
+change requests
+
+
+
+Continuous Delivery:
+
+1. Plan
+2. Realize (Development & Testing)
+3. Release(automate deployment)
+4. Value (monitoring , feedback, Continuous Improvement)
+
+
+
+
+Release Strategy Recommendations
+
+
+Delivery Cadence & Triggers
+
+
+Delivery Cadence: frequency or regularity
+
+bug fixes, new features, improvements, updates
+
+
+Continuous delivery
+
+frequent releases--- weekly, bi-weekly or monthly
+
+release on the demand
+
+
+Triggers
+
+
+1. CD Trigger
+2. scheduled Trigger
+3. Manual Trigger
+
+
+**** release Gates & Approvals
+
+stage
+pre-deployment Conditions------------>Deployment Process(jobs---tasks)----------> Post-deployment conditions
+
+
+
+Deployment Patterns
+
+i. classical deployment pattern
+ DTSP(Dev-TEST-Staging-Production)
+
+ii. modern deployment pattern
+
+1. Blue-green deployment
+
+blue env(active)---- current prod env
+
+green env(passive)---- duplicate env
+
+
+2. Deployment Slot
+
+
+3. Canary release---- early warning system
+
+
+feature----- subset of users
+
+4. feature toggle/ flag
+
+
+5. dark launching/release
+
+metrics: user feedback, conversion rate, engagement
+
+
+
+Azure Key Vault
+
+
+
+DevSecOps:
+
+Azure Policy
+
+MG
+Sub
+RG
+R
+
+JSON file
+
+
+
+Day 4:-----------------------------------------------------------------------------------------------------------------------
+
+Attendance Link:
+https://rms-new.netlify.app/third_party?batch_header=208985 	
+Use Your Corporate E-mail Address
+Trainer Name: Pooja Sharma
+
+
+LET Portal(Student Portal) Login: Training details are available on this portal (Meeting Links, Recording Links, Reference Links etc.)
+      Link:----- https://www.mykoenig.com/
+      Credentials Details:---- Email ID: Your Corporate Email ID, Password: 208985
+
+Lab Access Details:
+    Lab Link: https://gsi.learnondemand.net/
+    Email ID: Login using your personal Microsoft account Email ID
+    Click Register and Redeem Lab training key (Training Key: 6A78AED8B7B04610)
+    **Important: Make sure you Redeem Lab training key within these training days, once training completes, lab key will 
+    expire and you will not be able to access labs.
+
+
+Achievement URL:
+https://learn.microsoft.com/en-us/users/me/achievements?redeem=5RXNGD&WT.mc_id=ilt_partner_webpage_wwl&ocid=508978&DCS=DEPR2510503
+
+
+MTM Link:
+https://www.metricsthatmatter.com/url/u.aspx?A63065346217214881
+
+
+QL:
+https://www.qubits42.com/live/41703
+
+
+
+Azure DevOps Dashboards:---
+
+
+
+Azure Wiki:--- share knowledge within teams
+
+
+create, share & collaborate on documentation, knowledge sharing & project related info 
+
+
+stored with in the repo---- markdown files
+
+Wiki content:----
+Markdown ---lightweight markup language
+text, images, links, tables, code snippets, formula
+
+
+Mermaid Diagram
+JavaScript library for creating diagram, flowcharts by using the text-based syntax
+
+link to work item & code
+
+
+**** IaC & Configuration Management
+
+Env Deployment
+
+i) Manual Deployment
+ii)Automated Deployment
+
+ IaC
+
+
+1.Imperative Configuration: How?
+
+step-by-step instructions ---- achieve the outcome
+
+2. Declarative Configuration: What?
+
+describing the desired end state of the system or resource
+
+
+Idempotent Configuration
+
+
+
+IaC----- 
+
+ARM Templates
+
+
+
+Azure Automation :----
+tools & services
+
+create 
+deploy
+monitoring
+cross-platform
+
+
+1. create the automation account
+
+Runbook----set of defined tasks/ procedures----> automate process in automation account
+
+i) Pre-defined(build-in): Runbook gallery
+
+ii) User-defined 
+
+
+Types of Runbook:
+
+1. Graphical runbook---- using visual interface
+
+2. PowerShell Runbook----using PS scripts
+
+3. Python Runbooks----using Python scripts
+
+4. PowerShell Workflow Runbook---using PS workflow scripts
+
+
+
+Function---- PS engine
+workflow----WWF
+
+
+
+DSC(Desired State Configuration):-----in win PS
+
+Configuration Drift
+
+IaC----- declarative syntax
+
+
+
+
+*****DevSecOps
+
+static Analyzer
+Azure Policy
+
+*****Resource Locks
+
+Azure Sub
+RG
+R
+
+Microsoft Defender for cloud
+
+CNAPP
+
+
+DevSecOps
+
+CSPM
+
+CWPL
+
+Dynamic Analyser---- OWASP ZAP
+
+
+
+*** AZure Monitor
+
+
+**** azure Load testing
+
+
+
+Blameless retrospective
+
+
+
+
+Theory + Labs
+
+Learning Paths
+Labs
+Knowledge check
+Qubits on student portal
+Practice assessment
+
+
+pass score: 700
+
+Renew
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
